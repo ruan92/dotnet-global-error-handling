@@ -56,10 +56,7 @@ namespace UseExceptionHandler
                     var exceptionHandlerPathFeature = context.Features.Get<IExceptionHandlerPathFeature>();
 
                     if (exceptionHandlerPathFeature?.Error is not null)
-                    {
                         await GlobalErrorHandler.HandleException(exceptionHandlerPathFeature.Error, context);
-                    }
-
                 });
             });
 
