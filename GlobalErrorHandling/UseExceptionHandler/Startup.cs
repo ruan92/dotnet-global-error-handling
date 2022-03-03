@@ -1,17 +1,10 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using UseExceptionHandler.Middleware.GlobalErrorHandling.Handlers;
 using UseExceptionHandler.Services;
 
@@ -44,7 +37,7 @@ namespace UseExceptionHandler
         {
             // This is the developer exception page that should be used in the development environment.
             // It has been commented out for the purposes of this exercise.
-            //app.UseDeveloperExceptionPage();
+            // app.UseDeveloperExceptionPage();
 
             // Add exception handler middleware to the pipeline.
             // Exception middleware must be placed before other middleware in the pipeline
